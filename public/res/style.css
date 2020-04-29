@@ -1,0 +1,37 @@
+*{
+font-family: 'Montserrat', sans-serif;    
+}
+.parent{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: column;
+}
+
+.url{
+    height: auto;
+    width: 100%;
+    border-color: lightgray;
+    outline-color: lightgray;
+    border-width: 1px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.btn{
+    align-content: 8px;
+    width: 8rem;
+    background-color: blue;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 8px;
+    font-weight: 500;
+    border-width: 0px;
+} 
