@@ -1,13 +1,22 @@
 <html>
-    <head>
-        <title>ni3Aayusham shortner</title>
-        <link rel="stylesheet" type="text/css" href="res/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    </head>
-    <body>
-            <div class="parent">
-                <input class ="url" type="text" placeholder="Paste URL here">
-                <button class="btn">Short It </button>
-            </div>
-        </body>
+<head>
+    <title>ni3Aayusham shortner</title>
+            <link rel="stylesheet" type="text/css" href="res/style.css">
+<!--    <link rel="stylesheet" type="text/css" href="../public/res/style.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form class="parent" method="post" action="/">
+            <input class="url" type="test" name="linkurl" placeholder="Paste URL here">
+            <input type="submit" value="Short It" class="btn">
+        </form>
+
+        <div class="shorten" id=<%= success ? "shorten-active" : "shorten" %>>
+            <h1><%= 'localhost:3000/'+code %></h1>
+        </div>
+    </div>
+</body>
 </html>
