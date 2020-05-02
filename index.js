@@ -32,11 +32,13 @@ app.get('/:id', (req, res) => {
   Url.findOne({
     uid: id
   }, function(err, result) {
-    if (!err) {
+    if (result != null) {
       redirectUrl = result.url.slice();
       console.log(redirectUrl);
       console.log(typeof redirectUrl);
       res.redirect(redirectUrl);
+    } else {
+      res.send("Invalid URL, please try again.🤐");
     }
   });
 })
