@@ -16,16 +16,6 @@ const urlSchema = new mongoose.Schema({
 });
 const Url = mongoose.model("Url", urlSchema);
 var redirectUrl = "";
-const testURL = new Url({
-  uid: 'test',
-  url: 'https://www.google.in'
-})
-testURL.save();
-const jsonObject = {
-  "ni3mumbaikar": "https://www.github.com/ni3mumbaikar",
-  "test": "https://www.github.com/ni3mumbaikar",
-  "r57fl0": "github_url_tera"
-};
 var request = require('request-promise');
 
 app.get('/', function(req, res) {
@@ -46,21 +36,9 @@ app.get('/:id', (req, res) => {
       redirectUrl = result.url.slice();
       console.log(redirectUrl);
       console.log(typeof redirectUrl);
-      console.log("inside");
-
       res.redirect(redirectUrl);
     }
   });
-
-
-  console.log("outside");
-
-  // res.redirect("https://www.google.in");
-
-  // if (jsonObject.hasOwnProperty(id)) {
-  //     res.redirect(jsonObject[id]);
-  // } else
-  //     res.send(id);
 })
 
 app.post('/', function(req, res) {
@@ -70,10 +48,14 @@ app.post('/', function(req, res) {
     uid: code,
     url: req.body.linkurl
   });
-  testurl.save();
-  jsonObject[code] = req.body.linkurl;
-  console.log(code);
-  flag = true;
+  testurl.save(function(err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Added new document in database successfully.");
+    }
+  });
+
   res.render('index', {
     'success': true,
     code: code
