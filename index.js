@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 configureExpress();
 
-mongoose.connect('mongodb://localhost:27017/test', {
+mongoose.connect('mongodb+srv://admin-ayush:url@10@cluster0-731cd.gcp.mongodb.net/URL', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
