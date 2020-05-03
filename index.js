@@ -16,14 +16,31 @@ const urlSchema = new mongoose.Schema({
 });
 const Url = mongoose.model("Url", urlSchema);
 var redirectUrl = "";
+var code = "";
 var request = require('request-promise');
 
 app.get('/', function(req, res) { //homepage
-  res.render('index', {
-    success: false,
-    code: ''
-  });
+  let valid = req.query.valid;
+  console.log(valid);
+  if (typeof req.query.valid === 'undefined') {
+    res.render('index', {
+      success: false,
+      code: code
+    });
+  } else {
+    res.render('index', {
+      success: valid,
+      code: code
+    });
+  }
+
 })
+// app.get("/temp", (req, res) => {
+//   res.render('index', {
+//     'success': true,
+//     code: code
+//   })
+// });
 
 app.get('/:id', (req, res) => { //open a shortened url
 
@@ -47,7 +64,7 @@ app.post('/home', (req, res) => res.redirect('/')); //redirect from error page t
 app.post('/', function(req, res) { //handle url shorten request
   const inputURL = req.body.linkurl;
   console.log('posted url : ' + inputURL);
-  var code = generateUID();
+  code = generateUID();
   const urlObject = new Url({
     uid: code,
     url: req.body.linkurl
@@ -60,11 +77,8 @@ app.post('/', function(req, res) { //handle url shorten request
       console.log("Added new document in database successfully.");
     }
   });
-
-  res.render('index', {
-    'success': true,
-    code: code
-  });
+  let string = encodeURIComponent('true');
+  res.redirect('/?valid=' + string);
 });
 
 function generateUID() {
