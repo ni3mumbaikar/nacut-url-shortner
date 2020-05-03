@@ -25,12 +25,12 @@ app.get('/', function(req, res) { //homepage
   if (typeof req.query.valid === 'undefined') {
     res.render('index', {
       success: false,
-      code: code
+      code: req.get('host')+'/'+code
     });
   } else {
     res.render('index', {
       success: valid,
-      code: code
+      code: req.get('host')+'/'+code
     });
   }
 
@@ -78,7 +78,7 @@ app.post('/', function(req, res) { //handle url shorten request
     }
   });
   let string = encodeURIComponent('true');
-  res.redirect('/?valid=' + string);
+  res.redirect('/?valid=' + string); //call karu? ha
 });
 
 function generateUID() {
