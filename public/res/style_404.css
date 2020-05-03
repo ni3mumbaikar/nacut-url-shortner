@@ -1,0 +1,22 @@
+*{
+font-family: 'Montserrat', sans-serif;    
+}
+
+.parent{
+    display: flex;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    background-color: steelblue;
+    color: white;
+    margin-top: 12px;
+    padding: 10px;
+}
