@@ -1,24 +1,12 @@
-<html>
-
-<head>
-  <title>ni3Aayusham shortner</title>
-  <link rel="stylesheet" type="text/css" href="res/style.css">
-  <!--    <link rel="stylesheet" type="text/css" href="../public/res/style.css">-->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-</head>
-
-<body>
+<%- include('partials/header') -%>
   <div class="wrapper">
     <form class="parent" method="post" action="/">
-      <input class="url" type="test" name="linkurl" placeholder="Enter URL here. e.g. https://www.google.in" pattern="https://.*" required autocomplete="off">
-      <input type="submit" value="Short It" class="btn">
+      <input class="url shadow-sm" type="test" name="linkurl" placeholder="Enter URL here. e.g. https://www.google.in" pattern="https://.*" required autocomplete="off">
+      <button type="submit" class="btn shadow btn-outline-danger btn-lg mybtn">Short it</button>
     </form>
 
     <div class="shorten" id=<%= success ? "shorten-active" : "shorten" %>>
       <h1><%= code %></h1>
     </div>
   </div>
-</body>
-
-</html>
+<%- include('partials/footer') -%>

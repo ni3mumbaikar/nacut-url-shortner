@@ -35,12 +35,13 @@ app.get('/', function(req, res) { //homepage
   }
 
 })
-// app.get("/temp", (req, res) => {
-//   res.render('index', {
-//     'success': true,
-//     code: code
-//   })
-// });
+
+app.get('/about',(req,res)=>{
+  res.render('about');
+});
+app.get('/source',(req,res)=>{
+  res.render('source');
+});
 
 app.get('/:id', (req, res) => { //open a shortened url
 

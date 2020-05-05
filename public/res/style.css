@@ -1,7 +1,46 @@
-* {
+
+body{
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
+  background-color: #ffff;
+}
+.navbar-brand{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.nav-link{
+
+  font-size: 2rem;
+  margin-right: 1.5rem;
 }
 
+.navbar{
+  background-color: #FF4C68;
+  font-family: 'Marck Script', cursive;
+}
+.container-fluid{
+  padding:1% 10%
+}
+.footer{
+  background-color:#FF4C68;
+position:absolute;
+bottom: 0;
+  color:white;
+}
+.about-h1{
+  color: black;
+}
+.about-p{
+  color: gray;
+  width:50%;
+  margin-top:2%;
+}
+.f{
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1rem;
+  padding-top: 1%;
+
+}
 .wrapper {
   height: 100%;
   display: flex;
@@ -22,7 +61,8 @@
 
 .url {
   height: auto;
-  width: 85%;
+  width: 50%;
+  margin-top: 6%;
   border-color: lightgray;
   outline-color: lightgray;
   border-width: 1px;
@@ -36,17 +76,12 @@
 
 #shorten-active {
   display: visible;
+  margin-top:3%;
 }
 
-.btn {
-  align-content: 8px;
-  width: 8rem;
-  background-color: blue;
-  margin-top: 10px;
-  border: none;
-  color: white;
-  border-radius: 12px;
-  padding: 8px;
-  font-weight: 500;
-  border-width: 0px;
+.mybtn{
+  margin-top: 5%;
+  border-radius: 50%;
+
+  color: black;
 }
