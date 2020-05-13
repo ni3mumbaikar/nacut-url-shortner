@@ -13,10 +13,11 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .btn{
-    outline: none;
-    border: none;
-    background-color: steelblue;
+    margin-top: 10%;
+    border-radius: 50px;
+    background: linear-gradient(to right,  #FF4C68, #FF4C68);
     color: white;
-    margin-top: 12px;
+    width: 12rem;
     padding: 10px;
+    border-color: rgba(0,0,0,0);
 }

@@ -1,12 +1,12 @@
 <%- include('partials/header') -%>
-  <div class="wrapper">
+<div class="wrapper">
     <form class="parent" method="post" action="/">
-      <input class="url shadow-sm" type="test" name="linkurl" placeholder="Enter URL here. e.g. https://www.google.in" pattern="https://.*" required autocomplete="off">
-      <button type="submit" class="btn shadow btn-outline-danger btn-lg mybtn">Short it</button>
+        <input class="url shadow" type="test" name="linkurl" placeholder="Enter URL here. e.g. https://www.google.in" pattern="https://.*" required autocomplete="off">
+        <button type="submit shadow-sm" class="btn shadow btn-lg mybtn">Short it</button>
     </form>
 
     <div class="shorten" id=<%= success ? "shorten-active" : "shorten" %>>
-      <h1><%= code %></h1>
+        <h1><%= code %></h1>
     </div>
-  </div>
+</div>
 <%- include('partials/footer') -%>
