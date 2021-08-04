@@ -1,6 +1,8 @@
 # NAcut URL Shortner
 
-![url demo](https://user-images.githubusercontent.com/24763651/128141322-9c5fedd6-dc7f-4b76-affc-916d4a9cd01d.png)
+![url demo](https://user-images.githubusercontent.com/24763651/128141322-9c5fedd6-dc7f-4b76-affc-916d4a9cd01d.png)  
+
+Live demo [here](https://nacut.herokuapp.com)  
 
 NAcut is open source url shortner that you can self host too. This project was designed to learn 🎓 basic building blocks of ejs, node js, mongoDB and middlwares like mongoose and express. 
 
